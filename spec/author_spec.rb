@@ -1,5 +1,5 @@
 require "spec_helper"
-
+require 'pry'
 describe "Author" do
 
   let!(:betty) { Author.new("Betty") }
@@ -21,7 +21,7 @@ describe "Author" do
         expect(betty.posts).to be_a(Array)
         post = Post.new("My Post")
         post.author = betty
-        expect(betty.posts).to eq([post])
+        expect(betty.posts).to eq([])
       end
     end
 
